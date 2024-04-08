@@ -20,6 +20,9 @@ public sealed class CameraMovement : Component
 
 	protected override void OnUpdate()
 	{
+		if ( IsProxy )
+			return;
+		
 		if ( Input.Pressed( "View" ) )
 		{
 			Distance = Distance == 0f ? 150f : 0f;

@@ -242,8 +242,7 @@
       "__guid": "8f903d47-b54e-4c0d-8b09-3cc11cde34fa",
       "Name": "Player",
       "Tags": "player",
-      "Enabled": true,
-      "NetworkMode": 2,
+      "NetworkMode": 1,
       "Components": [
         {
           "__type": "Sandbox.CharacterController",
@@ -311,7 +310,7 @@
           "__guid": "6b453f1a-eae7-4578-b5fc-edf762ffc5a3",
           "Name": "Body",
           "Enabled": true,
-          "NetworkMode": 2,
+          "NetworkMode": 1,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -329,14 +328,14 @@
           "Name": "Head",
           "Position": "0,0,61.78005",
           "Enabled": true,
-          "NetworkMode": 2
+          "NetworkMode": 1
         },
         {
           "__guid": "7af79e3b-d669-40ac-aeaf-3d05f3c4258e",
           "Name": "Camera",
           "Position": "-126.2504,0,64.77955",
           "Enabled": true,
-          "NetworkMode": 2,
+          "NetworkMode": 1,
           "Components": [
             {
               "__type": "Sandbox.CameraComponent",
@@ -463,6 +462,30 @@
           "Color": "0.8902,0.31765,0.05098,1"
         }
       ]
+    },
+    {
+      "__guid": "bf61cb0b-f9d9-4650-8bdb-96ffd3c22f3e",
+      "Name": "GameServer",
+      "Position": "-289.3549,-106.7783,174.1307",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Sandbox.NetworkHelper",
+          "__guid": "2f62b404-d6a0-469e-bf82-a9c5fb03871f",
+          "PlayerPrefab": {
+            "_type": "gameobject",
+            "go": "8f903d47-b54e-4c0d-8b09-3cc11cde34fa"
+          },
+          "SpawnPoints": [
+            {
+              "_type": "gameobject",
+              "go": "e5d606ea-994e-41f8-86b2-a95e5a85a2a1"
+            }
+          ],
+          "StartServer": true
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -488,7 +511,7 @@
   },
   "Title": "main",
   "Description": "",
-  "LastSaved": "2024-04-08T14:59:29.2887788-04:00",
+  "LastSaved": "2024-04-08T16:10:35.4673079-04:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": [

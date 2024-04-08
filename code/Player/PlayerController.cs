@@ -67,6 +67,9 @@ public sealed class PlayerController : Component
 
 	protected override void OnUpdate()
 	{
+		if ( IsProxy )
+			return;
+		
 		UpdateCrouch();
 		IsSprinting = Input.Down( "Run" );
 		
@@ -113,6 +116,9 @@ public sealed class PlayerController : Component
 
 	protected override void OnFixedUpdate()
 	{
+		if ( IsProxy )
+			return;
+		
 		BuildWishVelocity();
 		Move();
 	}
