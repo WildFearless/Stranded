@@ -1,0 +1,95 @@
+PlayerHud
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-family: "ＭＳ Ｐゴシック";
+	font-size: 12px;
+	
+	> .vitals
+	{
+		position: absolute;
+		bottom: 50px;
+		left: 32px;
+		font-size: 32px;
+		font-weight: bold;
+		color: #764217;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.activity 
+	{
+		position: absolute;
+		height: 100%;
+		top: 10px;
+		left: 20px;
+		font-size: 40px;
+		text-stroke: 3px black;
+		z-index: 1;
+		padding: 3.5px;
+	}
+
+	.logs
+	{
+		padding-top: 3px;
+		font-size: 40px;
+		text-stroke: 3px black;
+	}
+	
+	> .hotbar
+	{
+		position: absolute;
+		bottom: 32px;
+		width: 100%;
+		z-index: 1;
+		gap: 8px;
+		justify-content: center;
+		align-items: flex-end;
+		
+		> .slot
+		{
+			width: 64px;
+			height: 64px;
+			background-color: #313131;
+			border-radius: 16px;
+			transition: all 0.2s ease;
+			
+			&.active
+			{
+				background-color: #8d8d8d;
+				width: 96px;
+				height: 96px;
+			}
+		}
+	}
+	
+	.cutting-bars
+	{
+		position: relative;
+		left: 1px;
+		
+		.cutting-bar
+		{
+			width: 150px;
+			height: 20px;
+			background-color: black;
+			padding: 3.5px;
+
+			.inner{
+				background-color: grey;
+				flex-grow: 1;
+				
+				.fill
+				{
+					background-color: green;
+					width: 50%;
+					height: 100%;
+				}
+				
+			}
+		}
+	}
+}

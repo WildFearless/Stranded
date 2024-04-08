@@ -1,0 +1,148 @@
+{
+  "RootObject": {
+    "__guid": "8f903d47-b54e-4c0d-8b09-3cc11cde34fa",
+    "Name": "Player",
+    "Tags": "player",
+    "NetworkMode": 2,
+    "Components": [
+      {
+        "__type": "CharacterController",
+        "__guid": "5ceb8c8f-196f-4b7a-ab25-9098adeb96ac",
+        "Acceleration": 10,
+        "Bounciness": 0.3,
+        "GroundAngle": 45,
+        "Height": 64,
+        "IgnoreLayers": "player",
+        "Radius": 10.95,
+        "StepHeight": 18
+      },
+      {
+        "__type": "CapsuleCollider",
+        "__guid": "5c4e6e54-2209-4bfa-9f1a-9a7f4b261386",
+        "End": "0,0,57.2",
+        "IsTrigger": false,
+        "Radius": 13.1,
+        "Start": "0,0,12.1",
+        "Static": false
+      },
+      {
+        "__type": "PlayerController",
+        "__guid": "1cf326fa-a093-4dfa-81c3-968492bb5388",
+        "AirControl": 0.1,
+        "Body": {
+          "_type": "gameobject",
+          "go": "6b453f1a-eae7-4578-b5fc-edf762ffc5a3"
+        },
+        "CrouchSpeed": 90,
+        "GroundControl": 4,
+        "Head": {
+          "_type": "gameobject",
+          "go": "3cb3d960-d0c5-4770-9b7e-1e50efb7bd73"
+        },
+        "Health": 100,
+        "Inventory": [
+          ""
+        ],
+        "JumpForce": 350,
+        "Logs": 100,
+        "MaxForce": 50,
+        "MaxHealth": 100,
+        "Rocks": 100,
+        "RunSpeed": 290,
+        "Speed": 160
+      },
+      {
+        "__type": "CitizenAnimationHelper",
+        "__guid": "f28f6927-cae9-452d-88e8-3f5c4b51af7f",
+        "BodyWeight": 1,
+        "EyesWeight": 1,
+        "HeadWeight": 1,
+        "LookAtEnabled": false,
+        "Target": {
+          "_type": "component",
+          "component_id": "56d9a802-2768-4795-aab3-366d8e664e0c",
+          "go": "6b453f1a-eae7-4578-b5fc-edf762ffc5a3",
+          "component_type": "SkinnedModelRenderer"
+        }
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "6b453f1a-eae7-4578-b5fc-edf762ffc5a3",
+        "Name": "Body",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "SkinnedModelRenderer",
+            "__guid": "56d9a802-2768-4795-aab3-366d8e664e0c",
+            "BodyGroups": 341,
+            "CreateBoneObjects": false,
+            "Model": "models/citizen/citizen.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "3cb3d960-d0c5-4770-9b7e-1e50efb7bd73",
+        "Name": "Head",
+        "Position": "0,0,61.78005",
+        "Enabled": true,
+        "NetworkMode": 2
+      },
+      {
+        "__guid": "7af79e3b-d669-40ac-aeaf-3d05f3c4258e",
+        "Name": "Camera",
+        "Position": "-126.2504,0,64.77955",
+        "Tags": "maincamera",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "CameraComponent",
+            "__guid": "d3dc8ebc-f6ab-4dea-8549-79325f6c0d49",
+            "BackgroundColor": "0.33333,0.46275,0.52157,1",
+            "ClearFlags": "All",
+            "FieldOfView": 81.1,
+            "IsMainCamera": true,
+            "Orthographic": false,
+            "OrthographicHeight": 1204,
+            "Priority": 1,
+            "RenderExcludeTags": "",
+            "RenderTags": "",
+            "TargetEye": "None",
+            "Viewport": "0,0,1,1",
+            "ZFar": 10000,
+            "ZNear": 10
+          },
+          {
+            "__type": "CameraMovement",
+            "__guid": "ae0f93df-a162-469b-8b5d-50a574f0edca",
+            "Body": {
+              "_type": "gameobject",
+              "go": "6b453f1a-eae7-4578-b5fc-edf762ffc5a3"
+            },
+            "Distance": 150,
+            "Head": {
+              "_type": "gameobject",
+              "go": "3cb3d960-d0c5-4770-9b7e-1e50efb7bd73"
+            },
+            "Player": {
+              "_type": "component",
+              "component_id": "1cf326fa-a093-4dfa-81c3-968492bb5388",
+              "go": "8f903d47-b54e-4c0d-8b09-3cc11cde34fa",
+              "component_type": "PlayerController"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}

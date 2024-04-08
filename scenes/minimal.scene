@@ -1,0 +1,498 @@
+{
+  "__guid": "9f832399-4887-46b0-8f21-2ee284f538e2",
+  "GameObjects": [
+    {
+      "__guid": "182416b4-f808-4011-9ed9-5bc7a7350230",
+      "Name": "Environment",
+      "Position": "-52.77043,-124.6599,70.81791",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Children": [
+        {
+          "__guid": "8d7ac77b-f9e4-4c0c-a93f-e9e033e728d0",
+          "Name": "Floor",
+          "Position": "0,124.6599,-70.81791",
+          "Scale": "25,25,0.005809421",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "07ed483c-fb59-4068-b343-a800980e7150",
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": "materials/default.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "0.39608,0.5098,0.27059,1"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "44bebf05-a262-44bd-9ab3-f795b56d60ce",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "100,100,50",
+              "Static": false,
+              "Surface": "surfaces/grass.surface"
+            }
+          ]
+        },
+        {
+          "__guid": "78df1c94-61e7-47f3-93fd-58f68163f1ce",
+          "Name": "Directional Light",
+          "Position": "52.77043,124.6599,129.1821",
+          "Rotation": "-0.2459842,0.5938582,0.2931525,0.7077327",
+          "Tags": "light_directional,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.DirectionalLight",
+              "__guid": "884b8418-b5be-4e1c-821f-cfe99edbd253",
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "Shadows": true,
+              "SkyColor": "0.05882,0.07451,0.08235,1"
+            }
+          ]
+        },
+        {
+          "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
+          "Name": "2D Skybox",
+          "Position": "0,0,0",
+          "Tags": "skybox",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkyBox2D",
+              "__guid": "4718c436-f05b-4609-a3f4-3dcd73958ac7",
+              "SkyMaterial": "materials/skybox/light_test_sky_sunny03.vmat",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "e6e000c1-6eef-40d4-b164-18602c11433c",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-512,-512,-512",
+                "Maxs": "512,512,512"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 0.02,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "Projection": "Sphere",
+              "RenderDynamically": false,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
+          "Name": "Sun",
+          "Position": "0,0,0",
+          "Rotation": "-0.0729315,0.4822396,0.1305433,0.8631827",
+          "Tags": "light_directional,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.DirectionalLight",
+              "__guid": "ce33f111-8e59-48ee-a424-c58eb00153c9",
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.94419,0.97767,1,1",
+              "Shadows": true,
+              "SkyColor": "0.2532,0.32006,0.35349,1"
+            }
+          ]
+        },
+        {
+          "__guid": "be2685c3-8191-4937-8cfb-fb312e549362",
+          "Name": "Basic Tree",
+          "Position": "776.7717,118.6568,19.39194",
+          "Scale": "0.4635988,0.4635988,0.4635988",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "5fb93207-ec7e-4a13-a218-5fe3c54f5b67",
+              "Center": "9.099715,18.89993,-22.50015",
+              "IsTrigger": true,
+              "Scale": "500,500,328.8986",
+              "Static": false
+            },
+            {
+              "__type": "BasicColliderController",
+              "__guid": "a44d7fe1-83a5-4edd-81e5-717e7ddc037d"
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "6e53cca7-1237-47b8-8f0a-68efd44749bf",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/8riv_scrubtree_b01.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "b91912be-e4db-43aa-a6dd-16006e03ab8c",
+              "IsTrigger": false,
+              "Model": "models/8riv_scrubtree_b01.vmdl",
+              "Static": false
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "cc3c4582-2124-467a-9d10-7e6abcba9645",
+              "Name": "Tree Message",
+              "Position": "-70.26473,11.49787,-92.92049",
+              "Scale": "2.157037,2.157037,2.157037",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.WorldPanel",
+                  "__guid": "f20ad051-0277-49ed-b35f-b384c653d52a",
+                  "HorizontalAlign": "Center",
+                  "LookAtCamera": true,
+                  "PanelSize": "1400,512",
+                  "RenderScale": 1,
+                  "VerticalAlign": "Center"
+                },
+                {
+                  "__type": "NameTagPanel",
+                  "__guid": "124cfcc1-b445-41fe-9efa-e33d2e747e7a",
+                  "Name": "Press E to start or stop \ncutting the tree"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "8cf6d8c1-df6f-4aa1-a8dc-6809c7a3f032",
+          "Name": "Basic Rock",
+          "Position": "53.22141,691.2079,-217.8196",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "5d6471a3-3a1e-41fc-a60e-52911c780211",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/rust_nature/rocks/rock_med_c.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "af1216bc-657f-4b11-aed8-57f271ce7a4d",
+              "IsTrigger": false,
+              "Model": "models/rust_nature/rocks/rock_med_c.vmdl",
+              "Static": true
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "74f3f99a-6cf0-433f-a0de-4fd8010cb235",
+              "Center": "-6.500003,6.499999,246.2",
+              "IsTrigger": true,
+              "Scale": "500,500,200",
+              "Static": false
+            },
+            {
+              "__type": "RockColliderScript",
+              "__guid": "d1322fce-6791-49b4-9f47-3d7343c97ccc"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "f7dd2994-8bae-4df1-9a93-cd884178f7cd",
+              "Name": "Rock Message",
+              "Position": "-4.77417,-157.4531,211.2562",
+              "Rotation": "0,0,0.7071067,0.7071068",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.WorldPanel",
+                  "__guid": "afd0102c-da61-4736-bffe-3c6f0fd05603",
+                  "HorizontalAlign": "Center",
+                  "LookAtCamera": true,
+                  "PanelSize": "1400,512",
+                  "RenderScale": 1,
+                  "VerticalAlign": "Center"
+                },
+                {
+                  "__type": "NameTagPanel",
+                  "__guid": "d2462f92-d81c-450c-85f8-ad2e33bae4f2",
+                  "Name": "Press E to start or stop \nmining the rock"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "8f903d47-b54e-4c0d-8b09-3cc11cde34fa",
+      "Name": "Player",
+      "Tags": "player",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Sandbox.CharacterController",
+          "__guid": "5ceb8c8f-196f-4b7a-ab25-9098adeb96ac",
+          "Acceleration": 10,
+          "Bounciness": 0.3,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "player",
+          "Radius": 10.95,
+          "StepHeight": 18
+        },
+        {
+          "__type": "Sandbox.CapsuleCollider",
+          "__guid": "5c4e6e54-2209-4bfa-9f1a-9a7f4b261386",
+          "End": "0,0,57.2",
+          "IsTrigger": false,
+          "Radius": 13.1,
+          "Start": "0,0,12.1",
+          "Static": false
+        },
+        {
+          "__type": "PlayerController",
+          "__guid": "1cf326fa-a093-4dfa-81c3-968492bb5388",
+          "AirControl": 0.1,
+          "Body": {
+            "_type": "gameobject",
+            "go": "6b453f1a-eae7-4578-b5fc-edf762ffc5a3"
+          },
+          "CrouchSpeed": 90,
+          "GroundControl": 4,
+          "Head": {
+            "_type": "gameobject",
+            "go": "3cb3d960-d0c5-4770-9b7e-1e50efb7bd73"
+          },
+          "Health": 100,
+          "Inventory": [
+            ""
+          ],
+          "JumpForce": 350,
+          "Logs": 100,
+          "MaxForce": 50,
+          "MaxHealth": 100,
+          "Rocks": 100,
+          "RunSpeed": 290,
+          "Speed": 160
+        },
+        {
+          "__type": "Sandbox.Citizen.CitizenAnimationHelper",
+          "__guid": "f28f6927-cae9-452d-88e8-3f5c4b51af7f",
+          "BodyWeight": 1,
+          "EyesWeight": 1,
+          "HeadWeight": 1,
+          "LookAtEnabled": false,
+          "Target": {
+            "_type": "component",
+            "component_id": "56d9a802-2768-4795-aab3-366d8e664e0c",
+            "go": "6b453f1a-eae7-4578-b5fc-edf762ffc5a3",
+            "component_type": "SkinnedModelRenderer"
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "6b453f1a-eae7-4578-b5fc-edf762ffc5a3",
+          "Name": "Body",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "56d9a802-2768-4795-aab3-366d8e664e0c",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "3cb3d960-d0c5-4770-9b7e-1e50efb7bd73",
+          "Name": "Head",
+          "Position": "0,0,61.78005",
+          "Enabled": true,
+          "NetworkMode": 2
+        },
+        {
+          "__guid": "7af79e3b-d669-40ac-aeaf-3d05f3c4258e",
+          "Name": "Camera",
+          "Position": "-126.2504,0,64.77955",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.CameraComponent",
+              "__guid": "d3dc8ebc-f6ab-4dea-8549-79325f6c0d49",
+              "BackgroundColor": "0.33333,0.46275,0.52157,1",
+              "ClearFlags": "All",
+              "FieldOfView": 81.1,
+              "IsMainCamera": true,
+              "Orthographic": false,
+              "OrthographicHeight": 1204,
+              "Priority": 1,
+              "RenderExcludeTags": "",
+              "RenderTags": "",
+              "TargetEye": "None",
+              "Viewport": "0,0,1,1",
+              "ZFar": 10000,
+              "ZNear": 0.1
+            },
+            {
+              "__type": "CameraMovement",
+              "__guid": "ae0f93df-a162-469b-8b5d-50a574f0edca",
+              "Body": {
+                "_type": "gameobject",
+                "go": "6b453f1a-eae7-4578-b5fc-edf762ffc5a3"
+              },
+              "Distance": 0,
+              "Head": {
+                "_type": "gameobject",
+                "go": "3cb3d960-d0c5-4770-9b7e-1e50efb7bd73"
+              },
+              "Player": {
+                "_type": "component",
+                "component_id": "1cf326fa-a093-4dfa-81c3-968492bb5388",
+                "go": "8f903d47-b54e-4c0d-8b09-3cc11cde34fa",
+                "component_type": "PlayerController"
+              }
+            },
+            {
+              "__type": "Sandbox.Sharpen",
+              "__guid": "81b8c182-dc13-465d-8f7f-49ca3031952d",
+              "Scale": 0.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "c3d53a24-edb3-4cca-b13e-e901bf98ea41",
+      "Name": "UI",
+      "Position": "-189.9886,-164.3313,114.042",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "87dbd1df-6e92-421a-bd53-84228f20ca91",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "810b0190-b0eb-4491-a276-917da705aa01",
+          "Name": "MainHud",
+          "Position": "204.9283,-373.4435,109.6498",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "7889475d-980f-4b37-b2aa-c16fc462be98",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ZIndex": 100
+            },
+            {
+              "__type": "PlayerHud",
+              "__guid": "d5c91e96-fad4-4bbe-8dd7-d0cb12db509d",
+              "Player": {
+                "_type": "component",
+                "component_id": "1cf326fa-a093-4dfa-81c3-968492bb5388",
+                "go": "8f903d47-b54e-4c0d-8b09-3cc11cde34fa",
+                "component_type": "PlayerController"
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "0e0d71d5-1671-42b5-96b4-09f2c37f9585",
+          "Name": "Escape",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "99181e62-8382-4516-8792-e97c6a4a0b51",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ZIndex": 50
+            },
+            {
+              "__type": "PauseMenu",
+              "__guid": "c27e8984-7cee-4da6-9433-b8957ee02aec"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "e5d606ea-994e-41f8-86b2-a95e5a85a2a1",
+      "Name": "SpawnPoint",
+      "Position": "-130.8714,-67.90466,1.507481",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Sandbox.SpawnPoint",
+          "__guid": "1aa640f2-be82-47bd-8d25-353fd9b48c1b",
+          "Color": "0.8902,0.31765,0.05098,1"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 60,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "main",
+  "Description": "",
+  "LastSaved": "2024-04-08T14:59:29.2887788-04:00",
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": [
+    "orus.8riv_scrubtree_b01",
+    "rust.rock_med_c"
+  ]
+}

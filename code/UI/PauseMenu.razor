@@ -1,0 +1,42 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root class="@(IsOpen ? "" : "hide")">
+	<h2>PAUSED</h2>
+	<div class="options">
+		<div class="button" onclick=@OnResume>
+			Resume
+		</div>
+		<div class="button" onclick=@OnQuit>
+			Quit
+		</div>
+	</div>
+</root>
+
+@code
+{
+	public bool IsOpen { get; set; } = false;
+	
+	protected override void OnUpdate()
+	{
+		base.OnUpdate();
+
+		if ( Input.EscapePressed )
+		{
+			IsOpen = !IsOpen;
+		}
+	}
+
+	void OnResume()
+	{
+		IsOpen = false;
+	}
+
+	void OnQuit()
+	{
+		Game.Disconnect();
+	}
+	
+	protected override int BuildHash() => System.HashCode.Combine( IsOpen );
+}
