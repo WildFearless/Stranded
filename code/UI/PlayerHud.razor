@@ -1,0 +1,68 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div>
+		@if ( Player.IsRocking )
+		{
+			@:<div class="activity">Currently mining stone</div>
+		} 
+		else if ( Player.IsCutting )
+		{
+			@:<div class="activity">Currently cutting trees</div>
+		}
+		else
+		{
+			@:<div class="activity">Currently Idle</div>
+		}
+	</div>
+	<div class="vitals">
+		<p>🧱
+			<div class="logs">
+				@Player.Rocks
+			</div>
+		</p>
+		<div class="cutting-bars">
+			<div class="cutting-bar">
+				<div class="inner">
+					<div class="fill" style="width: @( Player.IsRocking ? (Player.Timer / Player.MiningSpeed * 100f) : 0 )%">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<p>🌳
+			<div class="logs">
+				@Player.Logs
+			</div>
+		</p>
+		<div class="cutting-bars">
+			<div class="cutting-bar">
+				<div class="inner">
+					<div class="fill" style="width: @( Player.IsCutting ? (Player.Timer / Player.CuttingSpeed * 100f) : 0 )%">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="hotbar">
+		@for ( int i = 0; i < Player.Slots; i++ )
+		{
+			<div class="slot @( (Player.ActiveSlot == i) ? "active" : "" )">
+
+			</div>
+		}
+	</div>
+</root>
+
+@code
+{
+    [Property] PlayerController Player { get; set; }
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( Player.Logs, Player.Rocks, Player.ActiveSlot, Player.Timer );
+}
