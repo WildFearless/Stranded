@@ -1,0 +1,571 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>package.mungus.turret2</name>
+    </assembly>
+    <members>
+        <member name="P:SandboxAddon.CatTVInteract.Cooldown">
+            <summary>
+            Cooldown time in seconds before interaction can happen again
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.CatTVInteract.MaterialSwitcher">
+            <summary>
+            The Material Switcher component to cycle through (will be enabled on first press)
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.CatTVInteract.DisableOnFirstPress">
+            <summary>
+            GameObjects to disable on first press
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.CatTVInteract.ClickSounds">
+            <summary>
+            Sounds to play on every click (all play at once)
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.CatTVInteract.TooltipTitle">
+            <summary>
+            The title of the tooltip when hovering. Empty to disable.
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.CatTVInteract.TooltipIcon">
+            <summary>
+            The icon for the tooltip. Either Material Icons or an Emoji.
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.CatTVInteract.TooltipDescription">
+            <summary>
+            A longer description for the tooltip.
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.CatTVInteract.IsActivated">
+            <summary>
+            Whether the TV has been activated (synced across network)
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.CatTVInteract.RequestInteract(Sandbox.GameObject)">
+            <summary>
+            Request the host to process the interaction
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.CatTVInteract.BroadcastClickSounds">
+            <summary>
+            Broadcast click sounds to all clients (plays all sounds at once)
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.CatTVInteract.BroadcastDisableObjects">
+            <summary>
+            Broadcast to all clients to disable the specified GameObjects
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.DeadlyLegos.Collider">
+            <summary>
+            The trigger collider to use. If not set, will find one on this GameObject.
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.DeadlyLegos.Damage">
+            <summary>
+            How much damage to deal when a player steps on the legos
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.DeadlyLegos.DamageCooldown">
+            <summary>
+            Cooldown before the same player can be hurt again (prevents spam damage)
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.DeadlyLegos.DamageSound">
+            <summary>
+            Sound to play when dealing damage
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.DeadlyLegos.DamageTags">
+            <summary>
+            Tags for the damage (e.g., "lego", "foot")
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBeans.DestroyOnConsume">
+            <summary>
+            Should the item be destroyed after being consumed once?
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBeans.ConsumeCooldown">
+            <summary>
+            Cooldown in seconds before the item can be consumed again (if not destroyed)
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBeans.FartSound">
+            <summary>
+            The fart sound to use for the player
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBeans.ConsumeSound">
+            <summary>
+            The sound to play when the beans are consumed
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBeans.FartParticlePrefab">
+            <summary>
+            Optional particle prefab to spawn at the player's pelvis when they fart
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBeans.TooltipTitle">
+            <summary>
+            The title of the tooltip when hovering. Empty to disable.
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBeans.TooltipIcon">
+            <summary>
+            The icon for the tooltip. Either Material Icons or an Emoji.
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBeans.TooltipDescription">
+            <summary>
+            A longer description for the tooltip.
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.FartBeans.RequestConsume(Sandbox.GameObject)">
+            <summary>
+            Request the host to process the consumption
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBoxButton.Cooldown">
+            <summary>
+            Cooldown time in seconds before the button can be pressed again
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBoxButton.PressDepth">
+            <summary>
+            How far the button moves when pressed (in local space)
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBoxButton.AnimationSpeed">
+            <summary>
+            How fast the button animates in/out
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBoxButton.PressDirection">
+            <summary>
+            Which local axis the button moves along when pressed
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBoxButton.OnPressed">
+            <summary>
+            Action to trigger when button is pressed
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBoxButton.PressSound">
+            <summary>
+            Sound to play when button is pressed
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBoxButton.ToggleEmitter">
+            <summary>
+            Cone Emitter to enable temporarily when pressed
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBoxButton.ToggleDuration">
+            <summary>
+            How long the ToggleEmitter stays enabled (in seconds)
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBoxButton.TooltipTitle">
+            <summary>
+            The title of the tooltip when hovering. Empty to disable.
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBoxButton.TooltipIcon">
+            <summary>
+            The icon for the tooltip. Either Material Icons or an Emoji.
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBoxButton.TooltipDescription">
+            <summary>
+            A longer description for the tooltip.
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.FartBoxButton.IsPressed">
+            <summary>
+            Synced press state so all clients see the animation
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.FartBoxButton.RequestPress(Sandbox.GameObject)">
+            <summary>
+            Request the host to process the button press
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.FartBoxButton.BroadcastPressSound">
+            <summary>
+            Broadcast press sound to all clients
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.FartBoxButton.BroadcastToggleEmitter">
+            <summary>
+            Broadcast toggle emitter to all clients
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.PlayerFartComponent.BaseFartsPerSecond">
+            <summary>
+            Base fart frequency (farts per second at 0 cans eaten)
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.PlayerFartComponent.FartIncreasePercentPerCan">
+            <summary>
+            How much the fart rate increases per can of beans (in percent)
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.PlayerFartComponent.MaxCans">
+            <summary>
+            Maximum number of cans that can affect fart rate
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.PlayerFartComponent.CansEaten">
+            <summary>
+            Current number of cans eaten
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.PlayerFartComponent.IsActive">
+            <summary>
+            Is this component currently active and causing farts?
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.PlayerFartComponent.FartSound">
+            <summary>
+            The sound to play when farting
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.PlayerFartComponent.FartParticlePrefab">
+            <summary>
+            Optional particle prefab to spawn at the pelvis when farting
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.PlayerFartComponent.AddCan">
+            <summary>
+            Add a can of beans to the player's count
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.PlayerFartComponent.ResetCans">
+            <summary>
+            Reset cans eaten to zero
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.PlayerFartComponent.GetPelvisBone">
+            <summary>
+            Find the pelvis bone GameObject on the player
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.PlayerFartComponent.FindChildByName(Sandbox.GameObject,System.String)">
+            <summary>
+            Recursively search for a child GameObject by name (case-insensitive)
+            </summary>
+        </member>
+        <member name="T:SandboxAddon.Hummingbird">
+            <summary>
+            A networked AI hummingbird that orbits around players and flies away when damaged.
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.DetectionRange">
+            <summary>
+            Maximum distance to detect and lock onto players
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.OrbitRadius">
+            <summary>
+            Distance to orbit around the player
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.HoverHeight">
+            <summary>
+            Height above the player to hover at while orbiting
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.OrbitSpeed">
+            <summary>
+            How fast to circle around the player
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.FollowSpeed">
+            <summary>
+            How quickly to follow and catch up to the player's position
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.RotationSpeed">
+            <summary>
+            How quickly to rotate and orient towards movement direction
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.WanderHeight">
+            <summary>
+            Height to maintain above ground when no player is detected
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.WanderSpeed">
+            <summary>
+            Forward flight speed while wandering
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.MinTurnInterval">
+            <summary>
+            Minimum time between direction changes while wandering
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.MaxTurnInterval">
+            <summary>
+            Maximum time between direction changes while wandering
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.MinIdleInterval">
+            <summary>
+            Minimum time between idle/hover periods
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.MaxIdleInterval">
+            <summary>
+            Maximum time between idle/hover periods
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.IdleDuration">
+            <summary>
+            How long to hover in place during idle periods
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.DescendSpeed">
+            <summary>
+            Speed at which the hummingbird descends to reach wander height
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.BobAmount">
+            <summary>
+            Vertical bobbing distance for natural flight motion
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.BobSpeed">
+            <summary>
+            Speed of the bobbing motion
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.TiltAmount">
+            <summary>
+            Banking/roll angle when turning for realistic flight
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.AvoidanceRadius">
+            <summary>
+            Distance at which to detect and avoid obstacles
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.AvoidanceStrength">
+            <summary>
+            Force applied to steer away from obstacles
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.GroundCheckDistance">
+            <summary>
+            Maximum raycast distance for detecting ground below (used for wandering and terrain following)
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.MaxTolerance">
+            <summary>
+            Maximum damage the hummingbird can take before flying away
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.OnFlyAway">
+            <summary>
+            Event triggered when the hummingbird starts flying away after taking too much damage
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.FlyAwaySpeed">
+            <summary>
+            Upward speed when flying away after being damaged
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.FlyAwayDuration">
+            <summary>
+            How long to fly upward before despawning
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.FlyingLoop">
+            <summary>
+            Looping sound that plays constantly while the hummingbird is alive
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.ChirpLoop">
+            <summary>
+            Looping chirp sound that plays only when locked onto a player
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Hummingbird.FlyAwayTriggerSound">
+            <summary>
+            One-shot sound that plays when the hummingbird starts flying away
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.Hummingbird.TryGetGroundHeight(Vector3,System.Single@)">
+            <summary>
+            Get ground height with smart caching to reduce raycast frequency
+            Only performs raycast if enough time has passed or bird has moved significantly
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.Hummingbird.UpdateCachedPlayers">
+            <summary>
+            Update the player cache - removes invalid/out-of-range players and adds new ones
+            Performance optimization to avoid Scene.GetAllObjects every frame
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.Hummingbird.FindNearestPlayer">
+            <summary>
+            Find the nearest player from the cached player list (much faster than scanning all objects)
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.Hummingbird.ApplyCollisionAvoidance">
+            <summary>
+            Apply collision avoidance forces to steer away from nearby obstacles
+            Optimized with early exits and cached calculations
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.MaterialSwitcher.Materials">
+            <summary>
+            List of materials that can be switched between
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.MaterialSwitcher.CurrentIndex">
+            <summary>
+            Current material index (synced across network)
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.MaterialSwitcher.IsActivated">
+            <summary>
+            Whether the switcher has been activated (won't apply materials until true)
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.MaterialSwitcher.Renderer">
+            <summary>
+            The model renderer to apply materials to
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.MaterialSwitcher.Activate">
+            <summary>
+            Activate the switcher and apply the current material (host-authoritative)
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.MaterialSwitcher.SetMaterialByIndex(System.Int32)">
+            <summary>
+            Set the material by index (host-authoritative)
+            </summary>
+            <param name="index">Index of the material to apply</param>
+        </member>
+        <member name="M:SandboxAddon.MaterialSwitcher.NextMaterial">
+            <summary>
+            Go to the next material in the list (host-authoritative)
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.MaterialSwitcher.PreviousMaterial">
+            <summary>
+            Go to the previous material in the list (host-authoritative)
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Podcast.Person1Sounds">
+            <summary>
+            The sound event containing Person 1's voice lines
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Podcast.Person2Sounds">
+            <summary>
+            The sound event containing Person 2's voice lines
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Podcast.Music">
+            <summary>
+            Background music to play (set the .sound to loop)
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Podcast.MusicPosition">
+            <summary>
+            The GameObject representing the music position (sounds play from here)
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Podcast.Person1VoicePoint">
+            <summary>
+            The GameObject representing Person 1's position (must have a Sound Point component)
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Podcast.Person2VoicePoint">
+            <summary>
+            The GameObject representing Person 2's position (must have a Sound Point component)
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Podcast.DelayBetweenLines">
+            <summary>
+            Delay in seconds between voice lines
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Podcast.AutoStart">
+            <summary>
+            Should the podcast start playing automatically?
+            </summary>
+        </member>
+        <member name="P:SandboxAddon.Podcast.EndPrefab">
+            <summary>
+            Prefab to spawn when the podcast finishes (optional)
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.Podcast.StartPodcast">
+            <summary>
+            Starts the podcast playback
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.Podcast.StopPodcast">
+            <summary>
+            Stops the podcast playback
+            </summary>
+        </member>
+        <member name="T:SandboxAddon.SimpleTurret">
+            <summary>
+            A hitscan turret that detects and shoots at players within range.
+            Works in multiplayer with server authority.
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.SimpleTurret.BroadcastShot(Vector3,Vector3,System.Boolean)">
+            <summary>
+            RPC method to broadcast visual/audio effects to all clients.
+            Optimized to avoid creating long-running async tasks.
+            </summary>
+        </member>
+        <member name="T:SandboxAddon.TurretHealth">
+            <summary>
+            A health component that can receive damage and trigger events when destroyed.
+            Similar to Prop health system but simplified for custom use cases.
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.TurretHealth.OnDamage(Sandbox.DamageInfo@)">
+            <summary>
+            Called when this component receives damage. Implements IDamageable interface.
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.TurretHealth.BroadcastDestruction">
+            <summary>
+            RPC method to broadcast destruction effects to all clients.
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.TurretHealth.DestroyAfterDelay">
+            <summary>
+            Destroys the GameObject after the configured delay (called only on server).
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.TurretHealth.Heal">
+            <summary>
+            Restore health to maximum.
+            </summary>
+        </member>
+        <member name="M:SandboxAddon.TurretHealth.Heal(System.Single)">
+            <summary>
+            Restore a specific amount of health.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:SandboxAddon.TurretHealth.IsObjectDead" -->
+        <member name="M:SandboxAddon.TurretHealth.GetHealthPercentage">
+            <summary>
+            Get health as a percentage (0-1).
+            </summary>
+        </member>
+    </members>
+</doc>
