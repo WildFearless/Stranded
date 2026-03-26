@@ -1583,12 +1583,12 @@
                       "431.5486,293.7219"
                     ],
                     "MaterialIndex": [
-                      1,
                       0,
                       1,
-                      1,
-                      1,
-                      1
+                      0,
+                      0,
+                      0,
+                      0
                     ],
                     "EdgeFlags": [
                       0,
@@ -1617,8 +1617,8 @@
                       0
                     ],
                     "Materials": [
-                      "materials/dev/reflectivity_30.vmat",
-                      "materials/brick wall 02.vmat"
+                      "materials/brick wall 02.vmat",
+                      "materials/dev/reflectivity_30.vmat"
                     ]
                   },
                   "OnComponentDestroy": null,
@@ -2250,7 +2250,7 @@
                       0
                     ],
                     "Materials": [
-                      "materials/generic/water_blue.vmat",
+                      "water.vmat",
                       "materials/dev/reflectivity_30.vmat"
                     ]
                   },
@@ -2268,7 +2268,7 @@
                   "RollingResistance": null,
                   "SmoothingAngle": 16.599957,
                   "Static": false,
-                  "Surface": null,
+                  "Surface": "surfaces/water.surface",
                   "SurfaceVelocity": "0,0,0"
                 },
                 {
@@ -2294,7 +2294,7 @@
                   "RollingResistance": null,
                   "Scale": "154.1007,307.2013,-0.5008088",
                   "Static": false,
-                  "Surface": null,
+                  "Surface": "surfaces/water.surface",
                   "SurfaceVelocity": "0,0,0"
                 }
               ],
@@ -3636,7 +3636,7 @@
           },
           "CannonTurnSpeed": 10,
           "Damage": 20,
-          "FireRate": 50,
+          "FireRate": 5,
           "FireSound": "sounds/bolt action rifle shot.sound",
           "IdleSweepAngle": 35,
           "IdleSweepSpeed": 1.2,
@@ -3935,7 +3935,7 @@
                     "Y": 0,
                     "Z": 0
                   },
-                  "Lifetime": 1,
+                  "Lifetime": 0.1,
                   "LocalSpace": 0,
                   "MaxParticles": 1000,
                   "OnComponentDestroy": null,
@@ -4020,23 +4020,16 @@
       "ExcludedBodies": "",
       "IncludedBodies": "",
       "CustomBounds": false
-    },
-    "GameObjectSystems": {
-      "Sandbox.Clutter.ClutterGridSystem": {
-        "Storage": {
-          "$blob": "8465034f-eb19-4ad0-82a5-c6dc74acb1fa"
-        }
-      }
     }
   },
   "ResourceVersion": 3,
   "Title": "main",
   "Description": null,
   "__references": [
+    "clicker.water#106778",
     "degg.f_table_small#8208",
     "drakefruit.bolty_shot#91286",
     "drakefruit.m4a1_shot#91284",
-    "exorealms.17c1531bdc5c7b13#41168",
     "facepunch.floor_dirt_d#57785",
     "facepunch.rifle_muzzleflash#76090",
     "facepunch.v_first_person_arms_human#142949",
