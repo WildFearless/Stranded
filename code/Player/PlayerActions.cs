@@ -86,6 +86,8 @@ public sealed class PlayerActions : Component
 			return;
 
 		PlayerCamera.LocalRotation *= Rotation.From( _cameraRecoilCurrent );
+		
+		
 	}
 
 	private void SavePlayerData()

@@ -46,6 +46,17 @@
     </div>
   </div>
 
+  <div class="ammo-display">
+    <div class="ammo-item">
+      <span class="ammo-label">Magazine:</span>
+      <span class="ammo-count">@Player.AmmoInMagazine/@Player.MagazineSize</span>
+    </div>
+    <div class="ammo-item">
+      <span class="ammo-label">Reserve:</span>
+      <span class="ammo-count">@Player.ReserveAmmo</span>
+    </div>
+  </div>
+
   <div class="exp-panel">
     <div class="skill">
       <div class="icon">🌳</div>
@@ -109,6 +120,7 @@
     protected override int BuildHash() => System.HashCode.Combine(
         Player.Logs, Player.Rocks, Player.ActiveSlot, Player.Timer,
         Player.WoodcuttingExperience, Player.MiningExperience,
-        Player.WoodcuttingLevel, Player.MiningLevel
+        Player.WoodcuttingLevel,
+        HashCode.Combine(Player.MiningLevel, Player.AmmoInMagazine, Player.ReserveAmmo)
     );
 }

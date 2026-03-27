@@ -94,6 +94,38 @@ PlayerHud
 		}
 	}
 
+	// Ammo display panel
+	.ammo-display {
+		position: absolute;
+		bottom: 280px;
+		right: 40px;
+		background-color: rgba(0, 0, 0, 0.7);
+		border-radius: 12px;
+		padding: 12px;
+		width: 325px;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+
+		.ammo-item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: 24px;
+
+			.ammo-label {
+				color: #ddd;
+				font-weight: bold;
+			}
+
+			.ammo-count {
+				color: #4CAF50;
+				font-weight: bold;
+				font-size: 26px;
+			}
+		}
+	}
+
 	// Experience panel - completely redesigned
 	.exp-panel {
 		position: absolute;
