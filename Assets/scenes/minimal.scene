@@ -86,8 +86,13 @@
               "OnComponentFixedUpdate": null,
               "OnComponentStart": null,
               "OnComponentUpdate": null,
+              "ShadowBias": 0.0005,
+              "ShadowCascadeCount": 4,
+              "ShadowCascadeSplitRatio": 0.91,
+              "ShadowHardness": 0,
               "Shadows": false,
-              "SkyColor": "0.05882,0.07451,0.08235,1"
+              "SkyColor": "0.05882,0.07451,0.08235,1",
+              "Visualizer": {}
             }
           ],
           "Children": []
@@ -188,8 +193,13 @@
               "OnComponentFixedUpdate": null,
               "OnComponentStart": null,
               "OnComponentUpdate": null,
+              "ShadowBias": 0.0005,
+              "ShadowCascadeCount": 4,
+              "ShadowCascadeSplitRatio": 0.91,
+              "ShadowHardness": 0,
               "Shadows": true,
-              "SkyColor": "0,0,0,0"
+              "SkyColor": "0,0,0,0",
+              "Visualizer": {}
             }
           ],
           "Children": []
@@ -4020,6 +4030,16 @@
       "ExcludedBodies": "",
       "IncludedBodies": "",
       "CustomBounds": false
+    },
+    "GameObjectSystems": {
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "fee44947-f919-432a-91ad-f50e7e839e1c"
+        }
+      },
+      "Sandbox.MovieMaker.MovieRecorderSystem": {
+        "DisableClientRecording": false
+      }
     }
   },
   "ResourceVersion": 3,
